@@ -14,7 +14,7 @@ class Usuario{
           })
           
           const user = await response.json()
-          console.log(user)
+        
   
        
         return user
@@ -65,6 +65,5 @@ const amandaLogin = {
 
 
 
-console.log('tchau')
 
 

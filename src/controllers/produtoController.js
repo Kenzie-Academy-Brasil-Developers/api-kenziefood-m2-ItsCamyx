@@ -4,6 +4,9 @@ class VitrineController{
 
     static BASEURL = 'https://kenzie-food-api.herokuapp.com'
 
+    
+
+
     static async listarProdutos(){
         const response = await fetch(`${this.BASEURL}/products`)
         const data = await response.json() 
@@ -75,6 +78,27 @@ class VitrineController{
 
     }
 
+    static filtrarProdutos(evento){
+        evento.preventDefault()
+        const vitrine = document.querySelector("#div-produtos-carrinho")
+        const categoria = evento.target.attributes[1].nodeValue
+        console.log(categoria)
+        if (categoria === "Panificadora" || "Fruta" || "botaoBebida") {
+            const produtosFiltrados = Busca.filtroCategoria(produtosApi, evento.textContent)
+            vitrine.innerHTML = ''
+            //function de listar produtos aqui
+        }
+
+        if (evento.id === "Todos") {
+
+            vitrine.innerHTML = ``
+            //function de listar produtos aqui
+            
+        }
+    }
+
+
+
     
 }
 
@@ -127,4 +151,4 @@ VitrineController.listarProdutos()
 
 
 
-// export {Api}
+export {VitrineController}
