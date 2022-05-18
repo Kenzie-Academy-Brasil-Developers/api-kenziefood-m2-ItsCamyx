@@ -1,70 +1,43 @@
-class Usuario{
+let localStorageToken = localStorage.getItem("token");
+if (!localStorageToken || localStorageToken === "undefined") {
+  //não tenho um token válido, zerar variável
+  localStorageToken = "";
+}
+class ApiUsuario {
+  static BASEURL = "https://kenzie-food-api.herokuapp.com";
 
-    static BASEURL = 'https://kenzie-food-api.herokuapp.com'
+  static async criarUsuario(data) {
+    const response = await fetch(`${this.BASEURL}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-    static async criarUsuario(data){
-        const response = await fetch(
-          `${this.BASEURL}/auth/register`,
-          {
-            method: "POST", 
-            headers: {
-              "Content-Type": "application/json", 
-            },
-            body: JSON.stringify(data), 
-          })
-          
-          const user = await response.json()
-          console.log(user)
-  
-       
-        return user
-      }
+    const user = await response.json();
+    console.log(user);
 
-    static async loginUsuario(data){
+    return user;
+  }
 
-        const response = await fetch(
-            `${this.BASEURL}/auth/login`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json", 
-              },
-              body: JSON.stringify(data),
-            })
-            .then(resp => resp.json())
-            .then(data =>{
-                if(typeof data === 'object'){
-                window.alert('erro')
-                }else{
-                    localStorage.setItem('Token', data)
-                }
-            })
-                
-            // const token = await response.json()
-            // localStorage.setItem('Token', token)
-            // return token 
-    }
+  static async loginUsuario(data) {
+    const response = await fetch(`${this.BASEURL}/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        if (typeof data === "object") {
+          window.alert("erro");
+        } else {
+          localStorage.setItem("Token", data);
+        }
+      });
+  }
 }
 
-const amanda = {
-    name: "Amanda",
-    email: "amanda@kenzie.com",
-    password: "2222"
-}
-
-const amandaLogin = { 
-    email: 'amanda@kenzie.com',
-    password:'2222'
-}
-
-// Usuario.criarUsuario(amanda)
-
-// Usuario.loginUsuario(amandaLogin)
-
-
-
-
-
-console.log('tchau')
-
-
+export { ApiUsuario };
