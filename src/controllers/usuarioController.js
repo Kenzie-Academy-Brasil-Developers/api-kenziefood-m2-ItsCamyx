@@ -49,4 +49,25 @@ class ApiUsuario {
   }
 }
 
-export { ApiUsuario };
+ export { ApiUsuario };
+// const amanda = {
+//     name: "Amanda",
+//     email: "amanda@kenzie.com",
+//     password: "2222"
+// }
+
+// const amandaLogin = { 
+//     email: 'amanda@kenzie.com',
+//     password:'2222'
+// }
+
+// Usuario.criarUsuario(amanda)
+
+// Usuario.loginUsuario(amandaLogin)
+
+
+
+
+
+
+
