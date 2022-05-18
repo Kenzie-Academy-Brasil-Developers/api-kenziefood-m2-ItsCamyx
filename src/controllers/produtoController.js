@@ -2,7 +2,7 @@
 
 class VitrineController{
 
-    static BASEURL = 'https://kenzie-food-api.herokuapp.com'
+    static BASEURL = 'https://api-kenzie-food.herokuapp.com'
 
     static async listarProdutos(){
         const response = await fetch(`${this.BASEURL}/products`)
