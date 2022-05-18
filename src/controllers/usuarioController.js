@@ -4,39 +4,48 @@ if (!localStorageToken || localStorageToken === "undefined") {
   localStorageToken = "";
 }
 class ApiUsuario {
-  static BASEURL = "https://api-kenzie-food.herokuapp.com/";
+  static token = localStorageToken;
 
   static async criarUsuario(data) {
-    const response = await fetch(`${this.BASEURL}/auth/register`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const user = await response.json();
-    console.log(user);
-
-    return user;
+    const response = await fetch(
+      "https://api-kenzie-food.herokuapp.com/auth/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+    return response;
   }
 
   static async loginUsuario(data) {
-    const response = await fetch(`${this.BASEURL}/auth/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        if (typeof data === "object") {
-          window.alert("erro");
-        } else {
-          localStorage.setItem("Token", data);
-        }
-      });
+    const token = await fetch(
+      "https://api-kenzie-food.herokuapp.com/auth/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        localStorage.setItem("token", res);
+        //localStorage.setItem("User", res.userId);
+        Api.token = res;
+      })
+      .catch((error) => error);
   }
 }
 
