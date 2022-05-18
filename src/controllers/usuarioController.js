@@ -42,32 +42,11 @@ class ApiUsuario {
       })
       .then((res) => {
         localStorage.setItem("token", res);
-        //localStorage.setItem("User", res.userId);
+
         Api.token = res;
       })
       .catch((error) => error);
   }
 }
 
- export { ApiUsuario };
-// const amanda = {
-//     name: "Amanda",
-//     email: "amanda@kenzie.com",
-//     password: "2222"
-// }
-
-// const amandaLogin = { 
-//     email: 'amanda@kenzie.com',
-//     password:'2222'
-// }
-
-// Usuario.criarUsuario(amanda)
-
-// Usuario.loginUsuario(amandaLogin)
-
-
-
-
-
-
-
+export { ApiUsuario };
