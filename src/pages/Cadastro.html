@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="../styles/reset.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <title>Capstone M2 - Cadastro</title>
+</head>
+<body id="cadastro-container">
+    <section id="cadastro-secao">   
+        <h1 id="cadastro-secao__slogan">Kenzie <span id="cadastro-secao__slogan2">Food</span></h1>
+        <h2 id="cadastro-secao__titulo">Cadastrar um novo cliente</h2>
+        <form id="cadastro-secao__formulario" action="#">
+            <input id="cadastro-formulario__nome" type="text" name="nome" placeholder="Nome do usuário" spellcheck="false" autocomplete="off" required>
+            <input id="cadastro-formulario__email" type="email" name="email" placeholder="E-mail" spellcheck="false" autocomplete="off" required>
+            <input id="cadastro-formulario__senha" type="password" name="senha" placeholder="Senha" spellcheck="false" autocomplete="off" required/>
+            <button id="cadastro-formulario__botao--cadastrar" type="submit">Cadastrar</button>
+            <div id="ir-login">
+                <p id="ir-login__paragrafo">Já tem cadastro?</p>
+                <button id="ir-login__botao"><a href="./login.html">Login</a></button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
