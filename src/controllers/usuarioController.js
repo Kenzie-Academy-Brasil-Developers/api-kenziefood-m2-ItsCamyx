@@ -4,7 +4,7 @@ if (!localStorageToken || localStorageToken === "undefined") {
   localStorageToken = "";
 }
 class ApiUsuario {
-  static BASEURL = "https://kenzie-food-api.herokuapp.com";
+  static BASEURL = "https://api-kenzie-food.herokuapp.com/";
 
   static async criarUsuario(data) {
     const response = await fetch(`${this.BASEURL}/auth/register`, {
