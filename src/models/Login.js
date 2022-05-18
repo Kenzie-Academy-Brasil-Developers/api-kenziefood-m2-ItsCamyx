@@ -20,11 +20,16 @@ class Login {
   }
   static verificaLogin() {
     const token = localStorage.getItem("token");
-    if (token !== "undefined" && token) {
-      return (window.location = "/index.html");
+    if (
+      token !== "undefined" &&
+      token !== null &&
+      token !== "" &&
+      token !== "[object Object]"
+    ) {
+      return (window.location = "/src/pages/Dashboard.html");
     } else {
       alert("Usuário ou senha inválidos!");
-      window.location = "/src/pages/Dashboard.html";
+      window.location = "/src/pages/Login.html";
       return false;
     }
   }
