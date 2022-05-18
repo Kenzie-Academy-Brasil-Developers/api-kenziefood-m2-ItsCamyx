@@ -399,13 +399,26 @@
     justify-content: center;
     background: #F8F9FA;
     border-radius: 0px 0px 12px 12px;
-    height: 280px;
+    height: 400px;
     width: 100vw;
 }
 .carrinho__lista{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
+    padding: 5px;
+}
+.carrinho__lista::-webkit-scrollbar{
+    width: 1em;
+}
+.carrinho__lista::-webkit-scrollbar-track{
+    background-color: #efdadf;
+    box-shadow: inset 0.05em 0 0 #838383;
+}
+.carrinho__lista::-webkit-scrollbar-thumb{
+    background: #FF2253;
+    border-radius: 0.5em;
 }
 .carrinho__lista--icone{
     width: 40px;
@@ -422,9 +435,74 @@
     text-align: center;
     padding: 10px;
 }
-.carrinho-total{}
-
-
+.carrinho__lista--itens{
+    display: flex;
+    margin-bottom: 10px;
+}
+.carrinho__lista-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+.div-carrinho{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    line-height: 10px;
+}
+.carrinho__lista-nome-produto{
+    width: 145px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #000000;
+}
+.carrinho__lista-categoria-produto{
+    width: 79px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #868E96;
+    margin-top: 5px;
+}
+.carrinho__lista-preco{
+    width: 91px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+}
+#botao-remover-produto{
+    width: 25px;
+    height: 25px;
+    background: #e8e8e8;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.botao-remover-produto img{
+    width: 9px;
+    height: 12px;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 12px;
+    color: #868E96;
+}
+.carrinho-total{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+.carrinho-total-quantidade, .carrinho-total-preco{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    font-size: 14px;
+}
 
 
 
@@ -555,6 +633,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 380px;
+    margin-left: 10px;
 }
 .dashboard-cabecalho{
     width: 55px;
@@ -634,6 +713,7 @@
     border: none;
     border-radius: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 #dashboard-editar img, #dashboard-deletar img{
     padding: 1px;
@@ -721,6 +801,7 @@
     .dashboard-navbar{
         margin-left: 90px;
         margin-top: 10px; 
+        overflow: hidden;
     }
     #dashboard-main{
         display: flex;
@@ -732,17 +813,19 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        width: 1300px;
+        width: 1200px;
         height: 50px;
+        margin-left: 250px;
     }
     #dashboard-secao-lista{
         display: flex;
         flex-direction: row;
-        overflow: none;
     }
     #dashboard-lista{
         display: flex;
         flex-direction: column;
+        width: 900px;
+        margin-left: 150px;
     }
     .dashboard-lista__itens{
         display: flex;
@@ -750,7 +833,39 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        width: 1500px;
-        height: 100px;
+        width: 1300px;
+        height: 30px;
+        background: #FFFFFF;
+        border: 1px solid #E9ECEF;
+        border-radius: 12px;
+        border: 1px rgb(235, 235, 235) solid;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .div-imagem-nome{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .div-dashboard-categorias{
+        display: flex;
+        flex-direction: row; 
+        gap: 20px;  
+    }
+    .dashboard-categoria-produto{
+        padding: 0 10px;
+    }
+    .dashboard-descricao-produto{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .div-botoes-editar-deletar{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .div-botoes-editar-deletar img{
+        width: 10px;
     }
 }
