@@ -11,11 +11,12 @@
 </head>
 <body class="container">
     <header class="header">
-        <h1 id="hearder-slogan">Kenzie <span id="hearder-slogan2">Food</span></h1>
+        <h1 class="hearder-slogan">Kenzie <span class="hearder-slogan2">Food</span></h1>
         <form class="vitrine-formulario">
             <button id="vitrine-formulario-botao"><img class="vitrine-formulario-img" src="../img/search.png"/></button>
             <input class="vitrine-formulario--input" type="search" autocomplete="off" spellcheck="false" placeholder="Pesquisar por produto"/></input>
         </form>
+        <button id="vitrine-formulario-logout"><a href="./Login.html"><img class="vitrine-formulario-img" src="../img/user.png"/></a></button>
     </header>
     <main id="vitrine-container">
     <nav id="navbar">
@@ -39,22 +40,76 @@
             <ul id="lista-produtos">
                 
             </ul>
-        </section>
-        <aside id="carrinho-container">
-            <h3 class="carrinho__titulo"><img src="../img/cart.png">Carrinho</h3>
-            <div class="carrinho">
-                <ul class="carrinho__lista">
-                    <img class="carrinho__lista--icone" src="../img/box.png">
-                    <span class="carrinho__lista--span">Por enquanto não temos produtos no carrinho</span>
-                    <!--<li></li>-->
+        </nav>
+        <div id="div-produtos-carrinho">
+            <section id="secao-produtos">
+                <ul id="lista-produtos">
+                    <!------->
                 </ul>
-                <div class="carrinho-total">
-                    <!--<div class=carrinho__quantidade-produtos></div>
-                    <div class=carrinho__preco-total></div>-->
+            </section>
+            <aside id="carrinho-container">
+                <h3 class="carrinho__titulo"><img src="../img/cart.png">Carrinho</h3>
+                <div class="carrinho">
+                    <ul class="carrinho__lista">
+                        <li class="carrinho__lista--itens">
+                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
+                            <div class="div-carrinho">
+                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
+                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
+                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                            </div>
+                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
+                        </li>
+                        <li class="carrinho__lista--itens">
+                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
+                            <div class="div-carrinho">
+                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
+                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
+                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                            </div>
+                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
+                        </li>
+                        <li class="carrinho__lista--itens">
+                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
+                            <div class="div-carrinho">
+                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
+                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
+                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                            </div>
+                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
+                        </li>
+                        <li class="carrinho__lista--itens">
+                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
+                            <div class="div-carrinho">
+                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
+                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
+                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                            </div>
+                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
+                        </li>
+                        <li class="carrinho__lista--itens">
+                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
+                            <div class="div-carrinho">
+                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
+                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
+                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                            </div>
+                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
+                        </li>
+                    </ul>
+                    <div class="carrinho-total">
+                        <div class="carrinho-total-quantidade">
+                            <span>Quantidade: </span>
+                            <span>5</span>
+                        </div>
+                        <div class="carrinho-total-preco">
+                            <span>Total: </span>
+                            <span>R&#36; 20,00</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </aside>
-    </div>
+            </aside>
+        </div>
     </main>
 <script type="module" src="../controllers/eventosController.js"></script>
 <script src="../controllers/produtoController.js" ></script>
