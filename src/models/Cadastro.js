@@ -1,4 +1,5 @@
 import { Usuario } from "/src/models/Usuario.js";
+
 import { ApiUsuario } from "/src/controllers/usuarioController.js";
 const inputs = document.querySelectorAll("input");
 const botaoCadastrar = document.getElementById(

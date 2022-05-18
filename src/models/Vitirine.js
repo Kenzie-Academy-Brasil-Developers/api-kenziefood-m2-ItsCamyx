@@ -1,27 +1,9 @@
-// async function receberDadosUsuarioAPI(){
-//     const dados= await VitrineController.listarProdutos()
-// //    atualizarProdutos(dados)
-//     console.log(dados)
-//   }
- 
-//   function atualizarProdutos(dados){
-//    const containerAvatar= document.getElementById("container_avatar")
-   
-//     containerAvatar.innerHTML= `
-//    <img
-//    id="container_avatar-img"
-//    src="${dados.avatarUrl}"
-//    alt="foto-user"
-//  />
-//  <p id="container_avatar-userName">${dados.username}</p>
-//    `
-//     header.append(containerAvatar)
-//   }
+import { VitrineController } from "../controllers/produtoController.js";
+
   
   
   async function receberProdutosAPI(){
      const allPosts= await VitrineController.listarProdutos();
-    
      percorrerArrayProd(allPosts);
      
  }
