@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="../styles/reset.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <title>Capstone M2 - Dashboard</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="hearder-slogan">Kenzie <span class="hearder-slogan2">Food</span></h1>
+        <form class="dashboard-formulario">
+            <button id="dashboard-formulario-botao"><img class="dashboard-formulario-img" src="../img/search.png"/></button>
+            <input class="dashboard-formulario--input" type="search" autocomplete="off" spellcheck="false" placeholder="Pesquisar por produto"/></input>
+        </form>
+        <button id="dashboard-formulario-logout"><a href="./Login.html"><img class="vitrine-formulario-img" src="../img/user.png"/></a></button>
+    </header>
+    <section id="dashboard-container">
+        <nav class="dashboard-navbar">
+            <ul class="dashboard-navbar-lista">
+                <li class="navbar-lista__categoria">
+                    <a class="navbar-lista__categoria--todos" data-id="Todos" href="#" target="_self">Todos</a>
+                </li>
+                <li class="navbar-lista__categoria">
+                    <a  class="navbar-lista__categoria--panificadora" data-id="Panificadora" href="#" target="_self">Panificadora</a>
+                </li>
+                <li class="navbar-lista__categoria">
+                    <a class="navbar-lista__categoria--frutas" data-id="Frutas" href="#" target="_self">Frutas</a>
+                </li>
+                <li class="navbar-lista__categoria">
+                    <a class="navbar-lista__categoria--bebidas" data-id="Bebidas" href="#" target="_self">Bebidas</a>
+                </li>
+            </ul>
+            <button id="dashboard-botao-adicionar-produto">Adicionar novo produto</button>
+        </nav>
+    </section>
+    <main id="dashboard-main">
+        <div class="div-dashboard-cabecalho">
+            <h2 class="dashboard-cabecalho">Produto</h2>
+            <h2 class="dashboard-cabecalho">Categorias</h2>
+            <h2 class="dashboard-cabecalho">Descrição</h2>
+            <h2 class="dashboard-cabecalho">Ações</h2>
+        </div>
+        <section id="dashboard-secao-lista">
+            <ol id="dashboard-lista">
+                <li class="dashboard-lista__itens">
+                    <div class="div-imagem-nome">
+                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
+                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
+                    </div>
+                    <div class="div-dashboard-categorias">
+                        <span class="dashboard-categoria-produto">Panificadora</span>
+                        <span class="dashboard-categoria-produto">Frutas</span>
+                    </div>
+                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
+                    <div class="div-botoes-editar-deletar">
+                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
+                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
+                    </div>
+                </li>
+                <li class="dashboard-lista__itens">
+                    <div class="div-imagem-nome">
+                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
+                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
+                    </div>
+                    <div class="div-dashboard-categorias">
+                        <span class="dashboard-categoria-produto">Panificadora</span>
+                        <span class="dashboard-categoria-produto">Frutas</span>
+                    </div>
+                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
+                    <div class="div-botoes-editar-deletar">
+                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
+                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
+                    </div>
+                </li>
+                <li class="dashboard-lista__itens">
+                    <div class="div-imagem-nome">
+                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
+                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
+                    </div>
+                    <div class="div-dashboard-categorias">
+                        <span class="dashboard-categoria-produto">Panificadora</span>
+                        <span class="dashboard-categoria-produto">Frutas</span>
+                    </div>
+                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
+                    <div class="div-botoes-editar-deletar">
+                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
+                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
+                    </div>
+                </li>
+                <li class="dashboard-lista__itens">
+                    <div class="div-imagem-nome">
+                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
+                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
+                    </div>
+                    <div class="div-dashboard-categorias">
+                        <span class="dashboard-categoria-produto">Panificadora</span>
+                        <span class="dashboard-categoria-produto">Frutas</span>
+                    </div>
+                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
+                    <div class="div-botoes-editar-deletar">
+                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
+                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
+                    </div>
+                </li>
+                <li class="dashboard-lista__itens">
+                    <div class="div-imagem-nome">
+                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
+                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
+                    </div>
+                    <div class="div-dashboard-categorias">
+                        <span class="dashboard-categoria-produto">Panificadora</span>
+                        <span class="dashboard-categoria-produto">Frutas</span>
+                    </div>
+                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
+                    <div class="div-botoes-editar-deletar">
+                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
+                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

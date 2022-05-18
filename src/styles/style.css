@@ -1,9 +1,19 @@
+/*----------------------------------------------TODOS--------------------------------------------------*/
 ::selection {
     color:#353535;
     background-color: #e8ff16;
 }
 
-/*Tela de cadastro*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------CADASTRO------------------------------------------------*/
 #cadastro-container{
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -71,7 +81,16 @@
     color: blue;
 }
 
-/*Tela de login*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------LOGIN------------------------------------------------*/
 #login-container{
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -139,25 +158,31 @@
     color: blue;
 }
 
-/*Vitrine*/
-.container{}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------VITRINE------------------------------------------------*/
 .header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 10px;
-    box-shadow: 0 0 1em rgb(240, 239, 239);
-    height: 72px;
+    height: 10vh;
 }
-#hearder-slogan{
-    font-style: normal;
+.hearder-slogan{
     font-weight: 700;
     font-size: 21.6949px;
     line-height: 33px;
-    margin-left: 100px;
+    margin-left: 5vw;
+    margin-top: 20px;
 }
-#hearder-slogan2{
+.hearder-slogan2{
     color:#FF2253;
     font-size: 15px;
 }
@@ -166,16 +191,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 14px;
     background: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
-    width: 312px;
     height: 49px;
-    left: 1173px;
-    top: 12px;
-    margin-right: 100px;
+    width: 85vw;
+    margin-left: 7.5vw;
 }
 .vitrine-formulario-img{
     width: 20px;
@@ -196,17 +219,26 @@
     padding: 15px 18px 15px 16px;
     color: #FF2253;
 }
-.vitrine-formulario--input:focus {
+.vitrine-formulario--input:focus{
     outline-style: solid;
     outline-color: #E9ECEF;
 }
-.vitrine-formulario--input:hover::placeholder {
+.vitrine-formulario--input:hover::placeholder{
     padding-left: 5px;
     transition: 0.4s;
 }
-.vitrine-formulario--input:focus::placeholder {
+.vitrine-formulario--input:focus::placeholder{
     opacity: 0;
     transition-delay: 0.2s;
+}
+#vitrine-formulario-logout{
+    border: none;
+    background: none;
+}
+#vitrine-formulario-logout img{
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 1vh;
 }
 #vitrine-container{
     font-family: 'Poppins', sans-serif;
@@ -217,13 +249,15 @@
     margin: 0 auto;
     background-color: #ffffff;
 }
-#navbar{
+.navbar{
     display: flex;
-    margin-left: 80px;
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 60px; 
+    overflow: auto;
 }
-#navbar-lista{
+.navbar-lista{
     display: flex;
     align-items: center;
     padding: 15px 20px;
@@ -267,16 +301,16 @@
 }
 #div-produtos-carrinho{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 #secao-produtos{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 3vw;
+    overflow: auto;
 }
 #lista-produtos{
     display: flex;
-    flex-wrap: wrap;
 }
 .lista-produtos--itens{
     display: flex;
@@ -350,9 +384,10 @@
     padding-bottom: 20px;
     padding-top: 20px;
     text-align:start;
-    width: 280px;
+    width: 100vw;
+    margin-top: 30px;
     color: #ffffff;
-    border-radius: 12px 12px 0px 0px;
+    text-align: center;
 }
 .carrinho__titulo img {
     margin-right: 20px;
@@ -365,6 +400,7 @@
     background: #F8F9FA;
     border-radius: 0px 0px 12px 12px;
     height: 280px;
+    width: 100vw;
 }
 .carrinho__lista{
     display: flex;
@@ -387,3 +423,334 @@
     padding: 10px;
 }
 .carrinho-total{}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------DASHBOARD------------------------------------------------*/
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Poppins', sans-serif;
+    height: 10vh;
+}
+.hearder-slogan{
+    font-weight: 700;
+    font-size: 21.6949px;
+    line-height: 33px;
+    margin-left: 5vw;
+    margin-top: 20px;
+}
+.hearder-slogan2{
+    color:#FF2253;
+    font-size: 15px;
+}
+.dashboard-formulario{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 12px;
+    height: 49px;
+    width: 85vw;
+    margin-left: 7.5vw;
+}
+.dashboard-formulario-img{
+    width: 20px;
+    height: 20px;
+    background: #E9ECEF;
+}
+#dashboard-formulario-botao{
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    background: #E9ECEF;
+}
+.dashboard-formulario--input{
+    background: none;
+    border:none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 18px 15px 16px;
+    color: #FF2253;
+}
+.dashboard-formulario--input:focus{
+    outline-style: solid;
+    outline-color: #E9ECEF;
+}
+.dashboard-formulario--input:hover::placeholder{
+    padding-left: 5px;
+    transition: 0.4s;
+}
+.dashboard-formulario--input:focus::placeholder{
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+#dashboard-formulario-logout{
+    border: none;
+    background: none;
+}
+#dashboard-formulario-logout img{
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+#dashboard-container{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #212529;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.dashboard-navbar{
+    display: flex;
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+    margin-bottom: 20px;
+    margin-top: 60px; 
+    overflow: auto;
+}
+.dashboard-navbar-lista{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 15px;
+    width: 170px;
+    height: 48px;
+}
+#dashboard-botao-adicionar-produto{
+    font-family: 'Poppins', sans-serif;
+    padding: 0 25px;
+    font-size: 10px;
+    width: 217px;
+    height: 47px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    border-radius: 32px;
+    cursor: pointer;
+    color: #F8F9FA;
+    margin-left: 100vw;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 1.2;
+}
+#dashboard-main{
+    display: flex;
+}
+.div-dashboard-cabecalho{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+}
+.dashboard-cabecalho{
+    width: 55px;
+    height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #868E96;
+    text-align: center;
+}
+#dashboard-secao-lista{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+#dashboard-lista{
+    display: flex;
+}
+.dashboard-lista__itens{
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-left: 40px;
+    align-items: center;
+}
+.div-imagem-nome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard-imagem-produto{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+}
+.dashboard-nome-produto{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 20px;
+    color: #212529;
+}
+.div-dashboard-categorias{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-categoria-produto{
+    background: #F8F9FA;
+    border-radius: 8px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #868E96;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.dashboard-descricao-produto{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: #868E96;
+    width: 200px;
+}
+.div-botoes-editar-deletar{
+    display: flex;
+    flex-direction: column;
+}
+#dashboard-editar, #dashboard-deletar{
+    width: 28px;
+    height: 28px;
+    background: #F8F9FA;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#dashboard-editar img, #dashboard-deletar img{
+    padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------MEDIA QUERY-----------------------------------------*/
+@media (min-width: 426px) {
+    .main{
+        width:95vw;
+        margin:0 auto;
+        max-width: 420px;
+    }
+    .header{
+        width: 1600px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 72px;
+        box-shadow: 0 0 1em rgb(240, 239, 239);
+    }
+    .hearder-slogan{
+        margin-left: 7.75vw;
+    }
+    .vitrine-formulario{
+        width: 312px;
+        margin-left: 850px;
+    }
+    .vitrine-formulario-img{
+        width: 20px;
+    }
+    #vitrine-formulario-botao{
+        padding: 10px;
+    }
+    #vitrine-formulario-logout img{
+        margin-right: 100px;
+    }
+    .navbar{
+        margin-left: 90px;
+        margin-top: 10px; 
+        overflow: none;
+    }
+    #div-produtos-carrinho{
+        flex-direction: row;
+    }
+    #lista-produtos{
+        flex-wrap: wrap;
+    }
+    .carrinho__titulo{
+        width: 280px;
+        margin-top: 2px;
+        border-radius: 12px 12px 0px 0px;
+    }
+    .carrinho{
+        width: 280px;
+    }
+    #secao-produtos{
+        margin-left: 100px;
+        overflow: none;
+    }
+    #dashboard-botao-adicionar-produto{
+        margin-top: 15px;
+        margin-left: 1000px;
+        font-size: 13px;
+    }
+    .dashboard-formulario{
+        width: 312px;
+    }
+    #dashboard-formulario-logout img{
+        margin-right: 100px;   
+    }
+    .dashboard-formulario{
+        width: 312px;
+        margin-left: 850px;
+    }
+    .dashboard-navbar{
+        margin-left: 90px;
+        margin-top: 10px; 
+    }
+    #dashboard-main{
+        display: flex;
+        flex-direction: column;
+    }
+    .div-dashboard-cabecalho{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 1300px;
+        height: 50px;
+    }
+    #dashboard-secao-lista{
+        display: flex;
+        flex-direction: row;
+        overflow: none;
+    }
+    #dashboard-lista{
+        display: flex;
+        flex-direction: column;
+    }
+    .dashboard-lista__itens{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 1500px;
+        height: 100px;
+    }
+}
