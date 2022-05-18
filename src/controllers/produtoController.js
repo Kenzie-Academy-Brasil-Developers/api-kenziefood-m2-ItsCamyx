@@ -78,23 +78,30 @@ class VitrineController{
 
     }
 
-    static filtrarProdutos(evento){
+    static async filtrarProdutos(evento){
         evento.preventDefault()
-        const vitrine = document.querySelector("#div-produtos-carrinho")
+        // const vitrine = document.querySelector("#div-produtos-carrinho")
         const categoria = evento.target.attributes[1].nodeValue
+        const itens = await VitrineController.listarMeusProdutos()
+       
+        console.log(itens)
         console.log(categoria)
-        if (categoria === "Panificadora" || "Fruta" || "botaoBebida") {
-            const produtosFiltrados = Busca.filtroCategoria(produtosApi, evento.textContent)
-            vitrine.innerHTML = ''
-            //function de listar produtos aqui
-        }
 
-        if (evento.id === "Todos") {
-
-            vitrine.innerHTML = ``
-            //function de listar produtos aqui
+        if(categoria === "Panificadora" || "Fruta" || "botaoBebida") {
+             // vitrine.innerHTML = ``
+            const listaFiltrada = itens.filter((obj)=> obj.categoria === categoria)
+            //function de fazer template aqui (listaFiltrada)
+            console.log(listaFiltrada)
             
+        }else{
+            // vitrine.innerHTML = ``
+            //function de fazer template aqui (itens)
+            console.log(itens)
+            
+
         }
+
+        
     }
 
 
@@ -103,37 +110,8 @@ class VitrineController{
 }
 
 
-const objDeEdicao = {
-    nome: "Mousse de chocolate branco"
-}
-
-const objDeCriacao = 
-    {
-        nome: "Chocolate Especial",
-        preco: 5,
-        categoria: "Doce",
-        imagem: "https://s2.glbimg.com/2VfrzL0whSt0DzS2nJvZpi60V3w=/0x0:1239x846/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/l/n/kGHCQpTwuYTkdqsdau0A/chocolate.jpg",
-        descricao : "Este é um chocolate saboroso que não engorda",
-    }
-    
-const segundoObj = {
-    nome: "Chocolate Comum",
-    preco: 2,
-    categoria: "Doce",
-    imagem: "https://s2.glbimg.com/2VfrzL0whSt0DzS2nJvZpi60V3w=/0x0:1239x846/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/l/n/kGHCQpTwuYTkdqsdau0A/chocolate.jpg",
-    descricao : "Este é um chocolate saboroso, porém engorda bastante",
-
-}
-
-const terceiroObj = {
-    nome: "Chocolate Premium",
-    preco: 10,
-    categoria: "Doce",
-    imagem: "https://s2.glbimg.com/2VfrzL0whSt0DzS2nJvZpi60V3w=/0x0:1239x846/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/l/n/kGHCQpTwuYTkdqsdau0A/chocolate.jpg",
-    descricao : "Este é um chocolate saboroso que quanto mais você come mais emagrece!",
 
 
-}
 
 VitrineController.listarProdutos()
 
