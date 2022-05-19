@@ -35,4 +35,22 @@ import { VitrineController } from "../controllers/produtoController.js";
      containerProdutos.appendChild(li);
  }
 
- receberProdutosAPI();
+receberProdutosAPI();
+
+
+//BUSCAR CONTEÚDO PELO NOME
+const buscaPorNome= document.querySelector('.vitrine-formulario--input')
+buscaPorNome.addEventListener("keydown",buscarConteudo)
+
+async function buscarConteudo(){
+   
+  const produtosVindosDaAPI= await  VitrineController.listarProdutos();
+  
+  const textToSearch= buscaPorNome.value;
+  
+  const filtedName= produtosVindosDaAPI.filter((letra)=>{
+    return letra.nome.toLowerCase().includes(textToSearch.toLowerCase()) || letra.descricao.toLowerCase().includes(textToSearch.toLowerCase()) || letra.categoria.toLowerCase().includes(textToSearch.toLowerCase())
+  })
+  containerProdutos.innerHTML=''
+  percorrerArrayProd(filtedName)
+}
