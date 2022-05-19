@@ -1,118 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="../styles/reset.css" rel="stylesheet">
-    <link href="../styles/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../styles/reset.css" rel="stylesheet" />
+    <link href="../styles/style.css" rel="stylesheet" />
     <title>Capstone M2 - Vitrine</title>
-</head>
-<body class="container">
+  </head>
+  <body class="container">
     <header class="header">
-        <h1 class="hearder-slogan">Kenzie <span class="hearder-slogan2">Food</span></h1>
+      <h1 class="hearder-slogan">
+        <div>Kenzie</div>
+        <div class="hearder-slogan2">Food</div>
+      </h1>
+      <div class="formulario-container">
         <form class="vitrine-formulario">
-            <button id="vitrine-formulario-botao"><img class="vitrine-formulario-img" src="../img/search.png"/></button>
-            <input class="vitrine-formulario--input" type="search" autocomplete="off" spellcheck="false" placeholder="Pesquisar por produto"/></input>
+          <button id="vitrine-formulario-botao">
+            <img class="vitrine-formulario-img" src="../img/search.png" />
+          </button>
+          <input
+            class="vitrine-formulario--input"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Pesquisar por produto"
+          />
         </form>
-        <button id="vitrine-formulario-logout"><a href="./Login.html"><img class="vitrine-formulario-img" src="../img/user.png"/></a></button>
+        <button id="vitrine-formulario-logout">
+          <a href="./Login.html"
+            ><img class="vitrine-formulario-img" src="../img/user.png"
+          /></a>
+        </button>
+      </div>
     </header>
     <main id="vitrine-container">
-    <nav id="navbar">
-        <ul id="navbar-lista">
-            <li class="navbar-lista__categoria">
-                <a class="navbar-lista__categoria--todos" data-id="Todos" href="#" target="_self">Todos</a>
-            </li>
-            <li class="navbar-lista__categoria">
-                <a  class="navbar-lista__categoria--panificadora" data-id="Panificadora" href="#" target="_self">Panificadora</a>
-            </li>
-            <li class="navbar-lista__categoria">
-                <a class="navbar-lista__categoria--frutas" data-id="Frutas" href="#" target="_self">Frutas</a>
-            </li>
-            <li class="navbar-lista__categoria">
-                <a class="navbar-lista__categoria--bebidas" data-id="Bebidas" href="#" target="_self">Bebidas</a>
-            </li>
+      <nav id="navbar">
+        <ul class="navbar-lista">
+          <li class="navbar-lista__categoria">
+            <a
+              class="navbar-lista__categoria--todos"
+              data-id="Todos"
+              href="#"
+              target="_self"
+              >Todos</a
+            >
+          </li>
+          <li class="navbar-lista__categoria">
+            <a
+              class="navbar-lista__categoria--panificadora"
+              data-id="Panificadora"
+              href="#"
+              target="_self"
+              >Panificadora</a
+            >
+          </li>
+          <li class="navbar-lista__categoria">
+            <a
+              class="navbar-lista__categoria--frutas"
+              data-id="Frutas"
+              href="#"
+              target="_self"
+              >Frutas</a
+            >
+          </li>
+          <li class="navbar-lista__categoria">
+            <a
+              class="navbar-lista__categoria--bebidas"
+              data-id="Bebidas"
+              href="#"
+              target="_self"
+              >Bebidas</a
+            >
+          </li>
         </ul>
-    </nav>
-    <div id="div-produtos-carrinho">
+      </nav>
+      <div id="div-produtos-carrinho">
         <section id="secao-produtos">
-            <ul id="lista-produtos">
-                
-            </ul>
-        </nav>
-        <div id="div-produtos-carrinho">
-            <section id="secao-produtos">
-                <ul id="lista-produtos">
-                    <!------->
-                </ul>
-            </section>
-            <aside id="carrinho-container">
-                <h3 class="carrinho__titulo"><img src="../img/cart.png">Carrinho</h3>
-                <div class="carrinho">
-                    <ul class="carrinho__lista">
-                        <li class="carrinho__lista--itens">
-                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
-                            <div class="div-carrinho">
-                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
-                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
-                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
-                            </div>
-                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
-                        </li>
-                        <li class="carrinho__lista--itens">
-                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
-                            <div class="div-carrinho">
-                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
-                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
-                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
-                            </div>
-                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
-                        </li>
-                        <li class="carrinho__lista--itens">
-                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
-                            <div class="div-carrinho">
-                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
-                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
-                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
-                            </div>
-                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
-                        </li>
-                        <li class="carrinho__lista--itens">
-                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
-                            <div class="div-carrinho">
-                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
-                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
-                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
-                            </div>
-                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
-                        </li>
-                        <li class="carrinho__lista--itens">
-                            <img class="carrinho__lista-img" src="../img/panquecas.png" alt="Panquecas">
-                            <div class="div-carrinho">
-                                <span class="carrinho__lista-nome-produto">Panqueca de banana com aveia</span>
-                                <span class="carrinho__lista-categoria-produto">Panqueca</span>
-                                <span class="carrinho__lista-preco">R&#36; 20,00</span>
-                            </div>
-                            <button id="botao-remover-produto"><img src="../img/lixeira.png"></button>
-                        </li>
-                    </ul>
-                    <div class="carrinho-total">
-                        <div class="carrinho-total-quantidade">
-                            <span>Quantidade: </span>
-                            <span>5</span>
-                        </div>
-                        <div class="carrinho-total-preco">
-                            <span>Total: </span>
-                            <span>R&#36; 20,00</span>
-                        </div>
-                    </div>
+          <ul id="lista-produtos"></ul>
+        </section>
+        <div>
+          <aside id="carrinho-container">
+            <h3 class="carrinho__titulo">
+              <img src="../img/cart.png" />Carrinho
+            </h3>
+            <div class="carrinho">
+              <ul class="carrinho__lista">
+                <li class="carrinho__lista--itens">
+                  <img
+                    class="carrinho__lista-img"
+                    src="../img/panquecas.png"
+                    alt="Panquecas"
+                  />
+                  <div class="div-carrinho">
+                    <span class="carrinho__lista-nome-produto"
+                      >Panqueca de banana com aveia</span
+                    >
+                    <span class="carrinho__lista-categoria-produto"
+                      >Panqueca</span
+                    >
+                    <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                  </div>
+                  <button id="botao-remover-produto">
+                    <img src="../img/lixeira.png" />
+                  </button>
+                </li>
+                <li class="carrinho__lista--itens">
+                  <img
+                    class="carrinho__lista-img"
+                    src="../img/panquecas.png"
+                    alt="Panquecas"
+                  />
+                  <div class="div-carrinho">
+                    <span class="carrinho__lista-nome-produto"
+                      >Panqueca de banana com aveia</span
+                    >
+                    <span class="carrinho__lista-categoria-produto"
+                      >Panqueca</span
+                    >
+                    <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                  </div>
+                  <button id="botao-remover-produto">
+                    <img src="../img/lixeira.png" />
+                  </button>
+                </li>
+                <li class="carrinho__lista--itens">
+                  <img
+                    class="carrinho__lista-img"
+                    src="../img/panquecas.png"
+                    alt="Panquecas"
+                  />
+                  <div class="div-carrinho">
+                    <span class="carrinho__lista-nome-produto"
+                      >Panqueca de banana com aveia</span
+                    >
+                    <span class="carrinho__lista-categoria-produto"
+                      >Panqueca</span
+                    >
+                    <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                  </div>
+                  <button id="botao-remover-produto">
+                    <img src="../img/lixeira.png" />
+                  </button>
+                </li>
+                <li class="carrinho__lista--itens">
+                  <img
+                    class="carrinho__lista-img"
+                    src="../img/panquecas.png"
+                    alt="Panquecas"
+                  />
+                  <div class="div-carrinho">
+                    <span class="carrinho__lista-nome-produto"
+                      >Panqueca de banana com aveia</span
+                    >
+                    <span class="carrinho__lista-categoria-produto"
+                      >Panqueca</span
+                    >
+                    <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                  </div>
+                  <button id="botao-remover-produto">
+                    <img src="../img/lixeira.png" />
+                  </button>
+                </li>
+                <li class="carrinho__lista--itens">
+                  <img
+                    class="carrinho__lista-img"
+                    src="../img/panquecas.png"
+                    alt="Panquecas"
+                  />
+                  <div class="div-carrinho">
+                    <span class="carrinho__lista-nome-produto"
+                      >Panqueca de banana com aveia</span
+                    >
+                    <span class="carrinho__lista-categoria-produto"
+                      >Panqueca</span
+                    >
+                    <span class="carrinho__lista-preco">R&#36; 20,00</span>
+                  </div>
+                  <button id="botao-remover-produto">
+                    <img src="../img/lixeira.png" />
+                  </button>
+                </li>
+              </ul>
+              <div class="carrinho-total">
+                <div class="carrinho-total-quantidade">
+                  <span>Quantidade: </span>
+                  <span>5</span>
                 </div>
-            </aside>
+                <div class="carrinho-total-preco">
+                  <span>Total: </span>
+                  <span>R&#36; 20,00</span>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
+      </div>
     </main>
     <script type="module" src="../controllers/eventosController.js"></script>
-    <script type="module" src="../controllers/produtoController.js" ></script>
-    <script type="module" src="/src/models/Vitirine.js" ></script>
-</body>
+    <script type="module" src="../controllers/produtoController.js"></script>
+    <script type="module" src="/src/models/Vitirine.js"></script>
+  </body>
 </html>
