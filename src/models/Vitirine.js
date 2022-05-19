@@ -35,4 +35,46 @@ import { VitrineController } from "../controllers/produtoController.js";
      containerProdutos.appendChild(li);
  }
 
- receberProdutosAPI();
+receberProdutosAPI();
+
+
+//BUSCAR CONTEÚDO PELO NOME
+const buscaPorNome= document.querySelector('.vitrine-formulario--input')
+buscaPorNome.addEventListener("keydown",buscarConteudo)
+
+async function buscarConteudo(){
+   
+  const produtosVindosDaAPI= await  VitrineController.listarProdutos();
+  
+  const textToSearch= buscaPorNome.value;
+  
+  const filtedName= produtosVindosDaAPI.filter((letra)=>{
+    return letra.nome.toLowerCase().includes(textToSearch.toLowerCase()) || letra.descricao.toLowerCase().includes(textToSearch.toLowerCase()) || letra.categoria.toLowerCase().includes(textToSearch.toLowerCase())
+  })
+  containerProdutos.innerHTML=''
+  percorrerArrayProd(filtedName)
+}
+
+//FILTRAR POR CATEGORIA//
+const catPanificadora= document.querySelector(".navbar-lista__categoria--panificadora");
+const catFrutas= document.querySelector(".navbar-lista__categoria--frutas");
+const catBebidas= document.querySelector(".navbar-lista__categoria--bebidas");
+const catTodos= document.querySelector(".navbar-lista__categoria--todos");
+catBebidas.addEventListener("click",filterContentClicked);
+catPanificadora.addEventListener("click",filterContentClicked);
+catFrutas.addEventListener("click",filterContentClicked);
+catTodos.addEventListener("click",receberProdutosAPI);
+
+async function filterContentClicked(e){
+  const  botaoClicado= e.target; 
+  const  produtosVindosDaAPI= await  VitrineController.listarProdutos();
+
+  
+  
+  const filtedCat= produtosVindosDaAPI.filter((produto)=>{
+  return produto.categoria == botaoClicado.innerHTML;
+  })
+
+  containerProdutos.innerHTML=''
+  percorrerArrayProd(filtedCat)
+}
