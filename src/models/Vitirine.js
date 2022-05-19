@@ -29,9 +29,14 @@ import { VitrineController } from "../controllers/produtoController.js";
                     </div>
                     <div class="div-preco-botao">
                         <span class="preco-produto">R&#36;${cadaProd.preco.toFixed(2)}</span>
-                        <button id="botao-adicionar-carrinho" type="button"><img src="../img/botao-carrinho.png"></img></button>
+                        <button id="${cadaProd.id}" name="botao-carrinho" class="botao-adicionar-carrinho" type="button">
+                          <img id="imagem-id" class="img-adicionar-carrinho" src="../img/botao-carrinho.png"></img>
+                        </button>
                     </div>  `;
-   
+                    //BC: Linha 32 -> adicionei o id="${cadaProd.id}" 
+                    //BC: Obs -> mudei o segundo id para classe
+                    //BC: acidioneu uma classe a imagem
+
      containerProdutos.appendChild(li);
  }
 
