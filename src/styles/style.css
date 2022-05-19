@@ -722,6 +722,234 @@
     padding: 1px;
 }
 
+.hidden{
+    display: none;
+}
+
+#dashboard--modalEditarProdutos, #containerModalExcluir, #dashboard--modalCadastrarProdutos {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 53px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalCadastro{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width:450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+}
+
+.modalEditar{
+    height: 700px;
+    width:450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+}
+
+#modalCadastrarProdutos--infos, #dashboard--modalEditarProdutos--infos{
+    height: 80vh;
+    background: #FFFFFF;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 28px;
+    padding-right: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.labelAdmin{
+    position: static;
+    height: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    color: #212529;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputAdmin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 2px 26px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #DEE2E6;
+    box-sizing: border-box;
+    border-radius: 12px;
+    align-self: stretch;
+    margin: 0px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalCadastrarProdutos--cabecalho, .dashboard--modalEditarProdutos--cabecalho, .modalExcluir--cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    background: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalCadastrarProdutos--fechar, .dashboard--modalEditarProdutos--fechar, .modalExcluir--fechar{
+    width: 28px;
+    height: 27px;
+    background: #E9ECEF;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+} 
+
+.modalCadastrarProdutos--botao, .salvarAlterações{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.modalCadastrarProdutos--botao:hover, .salvarAlterações:hover{
+    cursor: pointer;
+    color: #212529;
+    background-color: #F8F9FA;
+}
+
+.excluirProdutos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+    font-family: 'Poppins', sans-serif;
+    width: 192px;
+    height: 52px;
+}
+
+.excluirProdutos:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+.modalCadastrarProdutos--fechar, .dashboard--modalEditarProdutos--fechar, .modalExcluir--fechar {
+    width: 28px;
+    height: 27px;
+    background: #E9ECEF;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalCadastrarProdutos--fechar:hover, .dashboard--modalEditarProdutos--fechar:hover, .modalExcluir--fechar:hover {
+    cursor: pointer;
+    border-style: inset;
+}
+
+#modalExcluir {
+    height: 283px;
+    width: 450px;
+    position: fixed;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard--modalEditarProdutos--botoes
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.salvarAlterações{
+    width: 192px;
+    height: 52px;
+}
+
+.modalExcluir--mensagem, .modalStatusAdd--mensagem{
+    background: #FFFFFF;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botaoModalExcluir, .botaoModalNaoExcluir{
+    width: 190px;
+    height: 50px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.botaoModalExcluir{
+    margin-right: 15px;
+}
+
+.botaoModalExcluir:hover, .botaoModalNaoExcluir:hover{
+    cursor: pointer;
+    border-color: #FF2253;
+}
+
+#dashboard--containerModalStatusAdd, #dashboard--containerModalStatusAddErro{
+    width: 490px;
+    height: 130px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #F8F9FA;
+}
+
+h4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.modalStatusAdd--barraVerde{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.modalStatusErro--barraVermelha{
+    width: -webkit-fill-available;
+    height: 8px;
+    background: #FF2253;
+    border-radius: 0px 0px 8px 8px;
+}
+
 
 
 
