@@ -391,6 +391,11 @@
 }
 .botao-adicionar-carrinho:hover{
     cursor: pointer;
+    background-color: rgba(168, 244, 250, 0.788);
+    box-shadow:1px 2px 1px gray; 
+}
+.botao-adicionar-carrinho:active{
+    box-shadow:1px 1px 1px gray; 
 }
 .botao-adicionar-carrinho img{ /* BC: mudei para classe*/
     font-weight: 900;
