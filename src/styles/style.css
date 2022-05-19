@@ -311,6 +311,8 @@
 #div-produtos-carrinho{
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #secao-produtos{
     display: flex;
