@@ -176,15 +176,19 @@
     height: 10vh;
 }
 .hearder-slogan{
+    display: flex;
+    justify-content: space-between;
     font-weight: 700;
     font-size: 21.6949px;
     line-height: 33px;
-    margin-left: 5vw;
-    margin-top: 20px;
+    margin-left: 20px;
+   
 }
 .hearder-slogan2{
     color:#FF2253;
     font-size: 15px;
+    margin-left: 7px;
+
 }
 .vitrine-formulario{
     font-family: 'Poppins', sans-serif;
@@ -197,8 +201,13 @@
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
     height: 49px;
-    width: 85vw;
-    margin-left: 7.5vw;
+    width: fit-content;
+
+}
+.formulario-container{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
 }
 .vitrine-formulario-img{
     width: 20px;
@@ -305,20 +314,19 @@
 }
 #secao-produtos{
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 3vw;
     overflow: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #lista-produtos{
     display: flex;
+    gap: 16px;
+
 }
 .lista-produtos--itens{
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
     gap: 16px;
-    margin-right: 45px;
 }
 .imagem-produto{
     width: 300px;
@@ -376,8 +384,7 @@
     cursor: pointer;
 }
 #carrinho-container{
-    width: 320px;
-    margin-right: 100px;
+    width: fit-content;
 }
 .carrinho__titulo{
     background-color: #FF2253;
@@ -514,18 +521,12 @@
 /*--------------------------------------------DASHBOARD------------------------------------------------*/
 .header{
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     justify-content: flex-start;
     font-family: 'Poppins', sans-serif;
     height: 10vh;
 }
-.hearder-slogan{
-    font-weight: 700;
-    font-size: 21.6949px;
-    line-height: 33px;
-    margin-left: 5vw;
-    margin-top: 20px;
-}
+
 .hearder-slogan2{
     color:#FF2253;
     font-size: 15px;
@@ -736,7 +737,6 @@
         max-width: 420px;
     }
     .header{
-        width: 1600px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -745,21 +745,19 @@
         box-shadow: 0 0 1em rgb(240, 239, 239);
     }
     .hearder-slogan{
-        margin-left: 7.75vw;
+        margin-left: 20px;
     }
-    .vitrine-formulario{
+    /* .vitrine-formulario{
         width: 312px;
         margin-left: 850px;
-    }
+    } */
     .vitrine-formulario-img{
         width: 20px;
     }
     #vitrine-formulario-botao{
         padding: 10px;
     }
-    #vitrine-formulario-logout img{
-        margin-right: 100px;
-    }
+  
     .navbar{
         margin-left: 90px;
         margin-top: 10px; 
@@ -780,7 +778,6 @@
         width: 280px;
     }
     #secao-produtos{
-        margin-left: 100px;
         overflow: none;
     }
     #dashboard-botao-adicionar-produto{

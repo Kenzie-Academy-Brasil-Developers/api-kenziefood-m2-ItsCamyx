@@ -11,16 +11,18 @@
 </head>
 <body class="container">
     <header class="header">
-        <h1 class="hearder-slogan">Kenzie <span class="hearder-slogan2">Food</span></h1>
-        <form class="vitrine-formulario">
-            <button id="vitrine-formulario-botao"><img class="vitrine-formulario-img" src="../img/search.png"/></button>
-            <input class="vitrine-formulario--input" type="search" autocomplete="off" spellcheck="false" placeholder="Pesquisar por produto"/></input>
-        </form>
-        <button id="vitrine-formulario-logout"><a href="./Login.html"><img class="vitrine-formulario-img" src="../img/user.png"/></a></button>
+        <h1 class="hearder-slogan"><div>Kenzie</div> <div class="hearder-slogan2">Food</div></h1>
+        <div class="formulario-container">
+            <form class="vitrine-formulario">
+                <button id="vitrine-formulario-botao"><img class="vitrine-formulario-img" src="../img/search.png"/></button>
+                <input class="vitrine-formulario--input" type="search" autocomplete="off" spellcheck="false" placeholder="Pesquisar por produto"/>
+            </form>
+            <button id="vitrine-formulario-logout"><a href="./Login.html"><img class="vitrine-formulario-img" src="../img/user.png"/></a></button>
+        </div>
     </header>
     <main id="vitrine-container">
     <nav id="navbar">
-        <ul id="navbar-lista">
+        <ul class="navbar-lista">
             <li class="navbar-lista__categoria">
                 <a class="navbar-lista__categoria--todos" data-id="Todos" href="#" target="_self">Todos</a>
             </li>
@@ -40,7 +42,6 @@
             <ul id="lista-produtos">
                 
             </ul>
-        </nav>
         <div id="div-produtos-carrinho">
             <section id="secao-produtos">
                 <ul id="lista-produtos">
