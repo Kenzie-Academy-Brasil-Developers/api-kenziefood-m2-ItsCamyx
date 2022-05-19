@@ -17,7 +17,7 @@ import {VitrineController} from './produtoController.js'
  }
 
 convertendoNodeListDeBotoes()
-console.log(arrayBotoesCategoria)
+
 
 function adicionarEventosAosBotoes(){
 

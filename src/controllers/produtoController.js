@@ -20,25 +20,25 @@ class VitrineController {
     return data;
   }
 
-  static filtrarProdutos(evento) {
-    evento.preventDefault();
-    const vitrine = document.querySelector("#div-produtos-carrinho");
-    const categoria = evento.target.attributes[1].nodeValue;
-    console.log(categoria);
-    if (categoria === "Panificadora" || "Fruta" || "botaoBebida") {
-      const produtosFiltrados = Busca.filtroCategoria(
-        produtosApi,
-        evento.textContent
-      );
-      vitrine.innerHTML = "";
-      //function de listar produtos aqui
-    }
+  // static filtrarProdutos(evento) {
+  //   evento.preventDefault();
+  //   const vitrine = document.querySelector("#div-produtos-carrinho");
+  //   const categoria = evento.target.attributes[1].nodeValue;
+  //   console.log(categoria);
+  //   if (categoria === "Panificadora" || "Fruta" || "botaoBebida") {
+  //     const produtosFiltrados = Busca.filtroCategoria(
+  //       produtosApi,
+  //       evento.textContent
+  //     );
+  //     vitrine.innerHTML = "";
+  //     //function de listar produtos aqui
+  //   }
 
-    if (evento.id === "Todos") {
-      vitrine.innerHTML = ``;
-      //function de listar produtos aqui
-    }
-  }
+  //   if (evento.id === "Todos") {
+  //     vitrine.innerHTML = ``;
+  //     //function de listar produtos aqui
+  //   }
+  // }
 
   static async adicionarProduto(dataProduto) {
     const response = await fetch(`${this.BASEURL}/my/products`, {

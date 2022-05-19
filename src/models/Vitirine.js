@@ -54,3 +54,27 @@ async function buscarConteudo(){
   containerProdutos.innerHTML=''
   percorrerArrayProd(filtedName)
 }
+
+//FILTRAR POR CATEGORIA//
+const catPanificadora= document.querySelector(".navbar-lista__categoria--panificadora");
+const catFrutas= document.querySelector(".navbar-lista__categoria--frutas");
+const catBebidas= document.querySelector(".navbar-lista__categoria--bebidas");
+const catTodos= document.querySelector(".navbar-lista__categoria--todos");
+catBebidas.addEventListener("click",filterContentClicked);
+catPanificadora.addEventListener("click",filterContentClicked);
+catFrutas.addEventListener("click",filterContentClicked);
+catTodos.addEventListener("click",receberProdutosAPI);
+
+async function filterContentClicked(e){
+  const  botaoClicado= e.target; 
+  const  produtosVindosDaAPI= await  VitrineController.listarProdutos();
+
+  
+  
+  const filtedCat= produtosVindosDaAPI.filter((produto)=>{
+  return produto.categoria == botaoClicado.innerHTML;
+  })
+
+  containerProdutos.innerHTML=''
+  percorrerArrayProd(filtedCat)
+}
