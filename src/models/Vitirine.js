@@ -3,6 +3,7 @@ import { VitrineController } from "../controllers/produtoController.js";
   
   
   async function receberProdutosAPI(){
+    containerProdutos.innerHTML=''
      const allPosts= await VitrineController.listarProdutos();
      percorrerArrayProd(allPosts);
      
@@ -30,7 +31,7 @@ import { VitrineController } from "../controllers/produtoController.js";
                     <div class="div-preco-botao">
                         <span class="preco-produto">R&#36;${cadaProd.preco.toFixed(2)}</span>
                         <button id="${cadaProd.id}" name="botao-carrinho" class="botao-adicionar-carrinho" type="button">
-                          <img id="imagem-id" class="img-adicionar-carrinho" src="../img/botao-carrinho.png"></img>
+                          <img id="${cadaProd.id}" class="img-adicionar-carrinho" src="../img/botao-carrinho.png"></img>
                         </button>
                     </div>  `;
                     //BC: Linha 32 -> adicionei o id="${cadaProd.id}" 

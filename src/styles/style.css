@@ -258,6 +258,16 @@
     margin: 0 auto;
     background-color: #ffffff;
 }
+#navbar a:hover{
+    background-color: #FF2253;
+    color: white;
+    box-shadow: 1px 2px 1px gray;
+}
+#navbar a:active{
+    background-color: #af0328;
+    color: white;
+    box-shadow: 0px 1px 0px gray;
+}
 .navbar{
     display: flex;
     margin-left: 1.7vw;
@@ -287,9 +297,10 @@
     color: #212529;
     padding: 10px;
 }
+
 .navbar-lista__categoria--todos{
-    background: #FF2253;
-    border: 1.5px solid #FF2253;
+    background: #FFF7F4;
+    border: 1.5px solid #FFF7F4;
     border-radius: 32px;
     height: 1000px;
 }
@@ -304,8 +315,8 @@
     border-radius: 32px;
 }
 .navbar-lista__categoria--bebidas{
-    background: #F3EEF5;
-    border: 1.5px solid #F3EEF5;
+    background: #FFF7F4;
+    border: 1.5px solid #FFF7F4;
     border-radius: 32px;
 }
 #div-produtos-carrinho{
@@ -377,6 +388,9 @@
     border-radius: 80%;
     width: 38px;
     height: 38px;
+}
+.botao-adicionar-carrinho:hover{
+    cursor: pointer;
 }
 .botao-adicionar-carrinho img{ /* BC: mudei para classe*/
     font-weight: 900;

@@ -4,7 +4,10 @@ import { VitrineController } from "../controllers/produtoController.js"
 const listaProdutos = document.getElementById("lista-produtos");
 listaProdutos.addEventListener("click", (e) => {
     const item = e.target;
-    if(item.tagName === "BUTTON" || item.className === 'img-adicionar-carrinho'){
+
+    if(item.tagName === "BUTTON"){
+    pegarProdutos(item.id)
+    }else if(item.className === 'img-adicionar-carrinho'){
         pegarProdutos(item.id)
     }
 })
