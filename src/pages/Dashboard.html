@@ -46,83 +46,97 @@
         </div>
         <section id="dashboard-secao-lista">
             <ol id="dashboard-lista">
-                <li class="dashboard-lista__itens">
-                    <div class="div-imagem-nome">
-                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
-                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
-                    </div>
-                    <div class="div-dashboard-categorias">
-                        <span class="dashboard-categoria-produto">Panificadora</span>
-                        <span class="dashboard-categoria-produto">Frutas</span>
-                    </div>
-                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
-                    <div class="div-botoes-editar-deletar">
-                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
-                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
-                    </div>
-                </li>
-                <li class="dashboard-lista__itens">
-                    <div class="div-imagem-nome">
-                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
-                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
-                    </div>
-                    <div class="div-dashboard-categorias">
-                        <span class="dashboard-categoria-produto">Panificadora</span>
-                        <span class="dashboard-categoria-produto">Frutas</span>
-                    </div>
-                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
-                    <div class="div-botoes-editar-deletar">
-                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
-                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
-                    </div>
-                </li>
-                <li class="dashboard-lista__itens">
-                    <div class="div-imagem-nome">
-                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
-                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
-                    </div>
-                    <div class="div-dashboard-categorias">
-                        <span class="dashboard-categoria-produto">Panificadora</span>
-                        <span class="dashboard-categoria-produto">Frutas</span>
-                    </div>
-                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
-                    <div class="div-botoes-editar-deletar">
-                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
-                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
-                    </div>
-                </li>
-                <li class="dashboard-lista__itens">
-                    <div class="div-imagem-nome">
-                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
-                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
-                    </div>
-                    <div class="div-dashboard-categorias">
-                        <span class="dashboard-categoria-produto">Panificadora</span>
-                        <span class="dashboard-categoria-produto">Frutas</span>
-                    </div>
-                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
-                    <div class="div-botoes-editar-deletar">
-                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
-                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
-                    </div>
-                </li>
-                <li class="dashboard-lista__itens">
-                    <div class="div-imagem-nome">
-                        <img class="dashboard-imagem-produto" src="../img/panquecas.png" alt="Panquecas">
-                        <h2 class="dashboard-nome-produto">Panqueca de banana com aveia</h2>
-                    </div>
-                    <div class="div-dashboard-categorias">
-                        <span class="dashboard-categoria-produto">Panificadora</span>
-                        <span class="dashboard-categoria-produto">Frutas</span>
-                    </div>
-                    <p class="dashboard-descricao-produto">ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus fugit, sic minus</p>   
-                    <div class="div-botoes-editar-deletar">
-                        <button id="dashboard-editar"><img src="../img/botao-editar.png"/></button>
-                        <button id="dashboard-deletar"><img src="../img/lixeira.png"/></button>
-                    </div>
-                </li>
+                
+
             </ol>
         </section>
     </main>
+
+    <div id="dashboard--modalEditarProdutos" class="hidden" class="modalForm">
+        <div class="dashboard--modalEditarProdutos--modalEditar">
+          <div class="dashboard--modalEditarProdutos--cabecalho">
+            <h2>Edição do produto</h2>
+            <button class="dashboard--modalEditarProdutos--fechar">X</button>
+          </div>
+    
+          <form id="dashboard--modalEditarProdutos--infos">
+    
+            <label for="nomeDoProduto">Nome do Produto</label>
+            <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
+    
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
+              class="inputFormAdminDescricao" />
+    
+            <label name="categoria" for="Categorias">Categorias</label>
+    
+            <select name="categoria" class="categoria">
+              <option name="categoria" value="Panificadora">Panificadora</option>
+              <option name="categoria" value="Frutas">Frutas</option>
+              <option name="categoria" value="Bebidas">Bebidas</option>
+    
+            </select>
+    
+            <label for="valorDoProduto">Valor do produto</label>
+            <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
+    
+            <label for="linkImg">Link da imagem</label>
+            <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
+    
+            <div class="botoesModalEditar">
+              <button class="salvarAlterações">Salvar alterações</button>
+              <button class="excluirProdutos">Excluir</button>
+            </div>
+          </form>
+        </div>
+    
+      </div>
+    
+      <div id="containerModalExcluir" class="hidden">
+        <div id="modalExcluir" class="modalForm">
+          <div class="modalExcluir--cabecalho">
+            <h2>Exclusão de produto</h2>
+            <button class="modalExcluir--fechar">X</button>
+          </div>
+          <div class="modalExcluir--mensagem">
+            <h2>Tem certeza que deseja excluir este produto?</h2>
+            <div id="modalExcluir--botoes">
+              <button class="botaoModalExcluir">Sim</button>
+              <button class="botaoModalNaoExcluir">Não</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="containerModalStatusAdd" class="hidden">
+        <div id="modalStatusAdd" class="modalForm">
+          <div>
+            <div class="modalStatusAdd--cabecalho">
+              <h2>Status</h2>
+              <button class="fecharStatus" class="fecharStatusAdd">X</button>
+            </div>
+            <div class="modalStatusAdd--mensagem">
+              <h4>Produto adicionado com sucesso</h4>
+              <div class="modalStatusAdd--barraVerde"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="containerModalStatusAddErro" class="hidden">
+        <div id="modalStatusErro" class="modalForm">
+          <div>
+            <div class="modalStatusErro--cabecalho">
+              <h2>Status</h2>
+              <button class="fecharStatus" class="fecharStatusAdd">X</button>
+            </div>
+            <div class="modalStatusErro--mensagem">
+              <h4>Produto não foi adicionado, ocorreu um erro!</h4>
+              <div class="modalStatusErro--barraVermelha"></div>
+            </div>
+          </div>
+        </div>
+    
+    <script type="module" src="../models/Usuario.js"></script>
 </body>
 </html>
