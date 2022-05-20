@@ -31,25 +31,27 @@ adicionarEventosAosBotoes()
 
 //----------------------------------DASHBOARD------------------------/ 
 
-// const botaoMostrarModalCadastro = document.querySelector('#dashboard-botao-adicionar-produto')
+const botaoMostrarModalCadastro = document.querySelector('#dashboard-botao-adicionar-produto')
 
-// // botaoMostrarModalCadastro.addEventListener('click', Modal.mostrarModal)
+botaoMostrarModalCadastro.addEventListener('click', Modal.mostrarModal)
 
-// const botaoFecharModalCadastro = document.querySelector('.modalCadastrarProdutos--fechar')
+const botaoFecharModalCadastro = document.querySelector('.modalCadastrarProdutos--fechar')
 
-// botaoFecharModalCadastro.addEventListener('click', Modal.fecharModal)
+botaoFecharModalCadastro.addEventListener('click', Modal.fecharModal)
 
-// const botaoFecharModalEditar = document.querySelector('.dashboard--modalEditarProdutos--fechar')
+const botaoFecharModalEditar = document.querySelector('.dashboard--modalEditarProdutos--fechar')
 
-// botaoFecharModalEditar.addEventListener('click', Modal.fecharModal)
+botaoFecharModalEditar.addEventListener('click', Modal.fecharModal)
 
-// const botaoFecharModalExcluir = document.querySelector('.modalExcluir--fechar')
+const botaoFecharModalExcluir = document.querySelector('.modalExcluir--fechar')
 
-// botaoFecharModalExcluir.addEventListener('click', Modal.fecharModal)
+botaoFecharModalExcluir.addEventListener('click', Modal.fecharModal)
 
-// const modalCadastrarNovoProduto = document.querySelector('#modalCadastrarProdutos--infos')
-// modalCadastrarNovoProduto.addEventListener('submit', Modal.capturarDadosNovoProduto)
+const modalCadastrarNovoProduto = document.querySelector('#modalCadastrarProdutos--infos')
+modalCadastrarNovoProduto.addEventListener('submit', Modal.capturarDadosNovoProduto)
 
+const botaoJaCadastrado = document.querySelector('.modalCadastrarProdutos--botao')
+botaoJaCadastrado.addEventListener('click', Modal.fecharModal)
 
 
 

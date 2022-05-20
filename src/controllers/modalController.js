@@ -21,7 +21,8 @@ class Modal{
         }
         if(modalSelecionadoClass === 'dashboard-deletar'){
             const modal = document.querySelector('#containerModalExcluir')
-            modal.classList.remove('hidden')
+            modal.classList.remove('hidden');
+             reload();
         }
         
     }
@@ -38,13 +39,18 @@ class Modal{
             modal.classList.add('hidden')
         }
 
-        if(botaoSelecionadoName === 'botaoFecharModalEditar'){
+        else if(botaoSelecionadoName === 'botaoFecharModalEditar'){
             const modal = document.querySelector('#dashboard--modalEditarProdutos')
             modal.classList.add('hidden')
         }
-        if(botaoSelecionadoName === 'botaoFecharModalExcluir'){
+        else if(botaoSelecionadoName === 'botaoFecharModalExcluir'){
             const modal = document.querySelector('#containerModalExcluir')
             modal.classList.add('hidden')
+        }else if(botaoSelecionadoName === "btnCad"){
+            const modal = document.querySelector('#dashboard--modalCadastrarProdutos')
+            modal.classList.add('hidden')
+
+
         }
 
     }
