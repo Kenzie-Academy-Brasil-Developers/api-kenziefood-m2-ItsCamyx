@@ -36,6 +36,10 @@ async function pegarProdutos(idProduto){
     listaProdutos.forEach((produtoSelecionado) => {
         if(produtoSelecionado.id === idProduto){
            adicionarProdutoCarrinho(produtoSelecionado)
+           let prod=[]
+           prod.push(produtoSelecionado)
+           localStorage.setItem("Produtos", JSON.stringify(prod));
+let pegarproduto = JSON.parse(localStorage.getItem("Produtos"));
         }
     })
 }
@@ -59,6 +63,7 @@ function adicionarProdutoCarrinho(produto){
             </button>
         `
     produtosCart.appendChild(itensCarrinho)
+    
 
     somarPrecos(produto.preco)
     qtdProduto++

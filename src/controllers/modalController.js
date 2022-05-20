@@ -49,43 +49,18 @@ class Modal{
 
     }
 
-    static capturarDadosNovoProduto(){
-        // evento.preventDefault()
-       
-
-    let valores = [];
-    console.log(valores)
-    inputs.forEach((input) => {
-      if (input.value !== "") {
-        valores.push(input.value);
-      }
-    });
-    const obj = {
-        nome: valores[0],
-        descricao: valores[1],
-        categoria: valores[2],
-        preco: valores[3],
-        imagem: valores[4]
-      };
-
-      console.log(obj)
-
-      const novoProduto = new Produto(obj.nome, obj.descricao, obj.categoria, obj.preco, obj.imagem);
-     VitrineController.adicionarProduto(novoProduto)
-
-     console.log(novoProduto)
-
-     botaoCadastro.addEventListener('click',(evento)=>{
-         evento.preventDefault();
-         console.log(evento);
-         Modal.capturarDadosNovoProduto();
-        //  alert("Produto cadastrado com sucesso!");
-        //   window.location = "/src/pages/Dashboard.html";
-
-     })
-        
-        
-    }
+    static async capturarDadosNovoProduto(evento){
+        evento.preventDefault()
+        const formulario = document.querySelector('#modalCadastrarProdutos--infos')
+        const objetoCadastro = {}
+        for (let i = 0; i < formulario.length; i++) {
+            if(formulario[i].name != ''){
+            objetoCadastro[formulario[i].name] = formulario[i].value
+            }
+        }
+        VitrineController.adicionarProduto(objetoCadastro)
+        console.log(objetoCadastro)
+        }
 }
 
 export {Modal}

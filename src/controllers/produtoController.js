@@ -49,6 +49,7 @@ class VitrineController {
       },
       body: JSON.stringify(dataProduto),
     });
+    
     const data = await response.json();
 
     return data;
