@@ -382,7 +382,7 @@
     line-height: 20px;
     color: #212529;
 }
-.botao-adicionar-carrinho{  /*BC: mudei para classe*/
+.botao-adicionar-carrinho{ 
     background: #E4F7EF;
     border: none;
     border-radius: 80%;
@@ -397,7 +397,7 @@
 .botao-adicionar-carrinho:active{
     box-shadow:1px 1px 1px gray; 
 }
-.botao-adicionar-carrinho img{ /* BC: mudei para classe*/
+.botao-adicionar-carrinho img{ 
     font-weight: 900;
     font-size: 12px;
     line-height: 14px;
@@ -502,7 +502,7 @@
     line-height: 24px;
     color: #212529;
 }
-#botao-remover-produto{
+.botao-remover-produto{
     width: 25px;
     height: 25px;
     background: #e8e8e8;

@@ -34,9 +34,6 @@ import { VitrineController } from "../controllers/produtoController.js";
                           <img id="${cadaProd.id}" class="img-adicionar-carrinho" src="../img/botao-carrinho.png"></img>
                         </button>
                     </div>  `;
-                    //BC: Linha 32 -> adicionei o id="${cadaProd.id}" 
-                    //BC: Obs -> mudei o segundo id para classe
-                    //BC: acidioneu uma classe a imagem
 
      containerProdutos.appendChild(li);
  }

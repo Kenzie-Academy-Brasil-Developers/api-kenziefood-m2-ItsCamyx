@@ -59,7 +59,7 @@ class VitrineController {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `bearer ${localStorage.getItem("Token")}`,
+        Authorization: `Bearer ${localStorage.getItem("Token")}`,
       },
       body: JSON.stringify(data),
     });
@@ -70,16 +70,20 @@ class VitrineController {
   }
 
   static async deletarProduto(id) {
-    const response = await fetch(`${this.BASEURL}/my/products/${id}`, {
+    console.log(localStorage.getItem("Token"))
+    const response = await fetch(`${this.BASEURL}/my/products/:${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("Token")}`,
       },
     });
-
-    return response;
+    const data = await response.json();
+    console.log(data)
+    return data;
   }
 }
+
+
 
 export { VitrineController };

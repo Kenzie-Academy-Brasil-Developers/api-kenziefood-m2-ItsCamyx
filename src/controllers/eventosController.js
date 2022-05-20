@@ -32,3 +32,4 @@ adicionarEventosAosBotoes()
 
 
 //  botaoCategoria.addEventListener('click', VitrineController.filtrarProdutos)
+
