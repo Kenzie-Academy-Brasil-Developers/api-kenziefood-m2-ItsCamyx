@@ -1,6 +1,5 @@
 import {VitrineController} from './produtoController.js'
-
-
+import { Modal } from './modalController.js'
 
 
 
@@ -30,6 +29,30 @@ function adicionarEventosAosBotoes(){
 
 adicionarEventosAosBotoes()
 
+//----------------------------------DASHBOARD------------------------/ 
 
-//  botaoCategoria.addEventListener('click', VitrineController.filtrarProdutos)
+const botaoMostrarModalCadastro = document.querySelector('#dashboard-botao-adicionar-produto')
+
+botaoMostrarModalCadastro.addEventListener('click', Modal.mostrarModal)
+
+const botaoFecharModalCadastro = document.querySelector('.modalCadastrarProdutos--fechar')
+
+botaoFecharModalCadastro.addEventListener('click', Modal.fecharModal)
+
+const botaoFecharModalEditar = document.querySelector('.dashboard--modalEditarProdutos--fechar')
+
+botaoFecharModalEditar.addEventListener('click', Modal.fecharModal)
+
+const botaoFecharModalExcluir = document.querySelector('.modalExcluir--fechar')
+
+botaoFecharModalExcluir.addEventListener('click', Modal.fecharModal)
+
+// const modalCadastrarNovoProduto = document.querySelector('#modalCadastrarProdutos--infos')
+// modalCadastrarNovoProduto.addEventListener('submit', Modal.capturarDadosNovoProduto)
+
+
+
+
+
+
 

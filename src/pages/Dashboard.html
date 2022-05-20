@@ -52,38 +52,75 @@
         </section>
     </main>
 
+    <div id="dashboard--modalCadastrarProdutos" class="hidden" class="modalForm">
+        <div class="modalCadastro">
+            <div class="modalCadastrarProdutos--cabecalho">
+                <h2>Cadastro de Produto</h2>
+                <button class="modalCadastrarProdutos--fechar">X</button>
+            </div>
+
+            <form id="modalCadastrarProdutos--infos">
+
+                <label class="labelAdmin"  for="nomeDoProduto">Nome do Produto</label>
+                <input type="text" name="nome" placeholder="Nome do produto" class="inputAdmin" class="inputCad" />
+
+                <label class="labelAdmin"  for="descricao">Descrição</label>
+                <input type="text" name="descricao" placeholder="Descrição" class="inputAdmin"
+                    class="inputFormAdminDescricao" class="inputCad" />
+
+                    <label class="labelAdmin"  name ="categoria" for="Categorias">Categorias</label>
+
+                    <select name="categoria"class="categoria">
+                        <option name="categoria" value="Panificadora">Panificadora</option>
+                        <option name="categoria" value="Frutas">Frutas</option>
+                        <option name="categoria" value="Bebidas">Bebidas</option>
+                        
+                      </select>
+
+            <label class="labelAdmin"  for="valorDoProduto">Valor do produto</label>
+                <input type="text" name="preco" placeholder="Valor do produto" class="inputAdmin" class="inputCad"/>
+
+                <label class="labelAdmin"  for="linkImg">Link da imagem</label>
+                <input type="text" name="imagem" placeholder="Link da imagem" class="inputAdmin" class="inputCad"/>
+
+                <button class="modalCadastrarProdutos--botao">Cadastrar Produto</button>
+            </form>
+        </div>
+        </div>
+
+
     <div id="dashboard--modalEditarProdutos" class="hidden" class="modalForm">
-        <div class="dashboard--modalEditarProdutos--modalEditar">
+        <div class="modalEditar">
           <div class="dashboard--modalEditarProdutos--cabecalho">
             <h2>Edição do produto</h2>
-            <button class="dashboard--modalEditarProdutos--fechar">X</button>
+            <button class="dashboard--modalEditarProdutos--fechar" name="botaoFecharModalEditar">X</button>
           </div>
     
           <form id="dashboard--modalEditarProdutos--infos">
     
-            <label for="nomeDoProduto">Nome do Produto</label>
-            <input type="text" name="nome" placeholder="Nome do produto" class="inputFormAdmin" />
+            <label class="labelAdmin"  for="nomeDoProduto">Nome do Produto</label>
+            <input type="text" name="nome" placeholder="Nome do produto" class="inputAdmin" />
     
-            <label for="descricao">Descrição</label>
-            <input type="text" name="descricao" placeholder="Descrição" class="inputFormAdmin"
-              class="inputFormAdminDescricao" />
+            <label class="labelAdmin"  for="descricao">Descrição</label>
+            <input type="text" name="descricao" placeholder="Descrição" class="inputAdmin"
+              class="inputAdminDescricao" />
     
-            <label name="categoria" for="Categorias">Categorias</label>
+            <label class="labelAdmin"  name="categoria" for="Categorias">Categorias</label>
     
             <select name="categoria" class="categoria">
               <option name="categoria" value="Panificadora">Panificadora</option>
               <option name="categoria" value="Frutas">Frutas</option>
               <option name="categoria" value="Bebidas">Bebidas</option>
     
-            </select>
+            </select> 
     
-            <label for="valorDoProduto">Valor do produto</label>
-            <input type="text" name="preco" placeholder="Valor do produto" class="inputFormAdmin" />
+            <label class="labelAdmin"  for="valorDoProduto">Valor do produto</label>
+            <input type="text" name="preco" placeholder="Valor do produto" class="inputAdmin" />
     
-            <label for="linkImg">Link da imagem</label>
-            <input type="text" name="imagem" placeholder="Link da imagem" class="inputFormAdmin" />
+            <label class="labelAdmin"  for="linkImg">Link da imagem</label>
+            <input type="text" name="imagem" placeholder="Link da imagem" class="inputAdmin" />
     
-            <div class="botoesModalEditar">
+            <div class="dashboard--modalEditarProdutos--botoes">
               <button class="salvarAlterações">Salvar alterações</button>
               <button class="excluirProdutos">Excluir</button>
             </div>
@@ -96,7 +133,7 @@
         <div id="modalExcluir" class="modalForm">
           <div class="modalExcluir--cabecalho">
             <h2>Exclusão de produto</h2>
-            <button class="modalExcluir--fechar">X</button>
+            <button class="modalExcluir--fechar" name="botaoFecharModalExcluir">X</button>
           </div>
           <div class="modalExcluir--mensagem">
             <h2>Tem certeza que deseja excluir este produto?</h2>
@@ -108,7 +145,7 @@
         </div>
       </div>
     
-      <div id="containerModalStatusAdd" class="hidden">
+      <div id="dashboard--containerModalStatusAdd" class="hidden">
         <div id="modalStatusAdd" class="modalForm">
           <div>
             <div class="modalStatusAdd--cabecalho">
@@ -123,7 +160,7 @@
         </div>
       </div>
     
-      <div id="containerModalStatusAddErro" class="hidden">
+      <div id="dashboard--containerModalStatusAddErro" class="hidden">
         <div id="modalStatusErro" class="modalForm">
           <div>
             <div class="modalStatusErro--cabecalho">
@@ -138,5 +175,6 @@
         </div>
     
     <script type="module" src="../models/Usuario.js"></script>
+    <script type="module" src="../controllers/eventosController.js"></script>
 </body>
 </html>
