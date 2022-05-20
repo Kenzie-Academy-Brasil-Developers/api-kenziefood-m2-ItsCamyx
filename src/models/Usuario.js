@@ -1,3 +1,5 @@
+import { Modal } from '../controllers/modalController.js'
+
 class Usuario {
   constructor(name, email, password) {
     this.name = this.verificaUser(name);
@@ -63,8 +65,19 @@ console.log(listaAdmin)
                         <button id="${cadaProd.id}"class="dashboard-editar"><img src="../img/botao-editar.png"/></button>
                         <button id="${cadaProd.id}" class="dashboard-deletar"><img src="../img/lixeira.png"/></button>
                     </div>`;
+
    
+
+
      listaAdmin.appendChild(li);
+     adicionarEventosAosProdutos()
+ }
+
+ function adicionarEventosAosProdutos(){
+  const botaoDeletar = document.querySelector('.dashboard-editar')
+  botaoDeletar.addEventListener('click', Modal.mostrarModal)
+  const botaoExcluir = document.querySelector('.dashboard-deletar')
+  botaoExcluir.addEventListener('click', Modal.mostrarModal)
  }
 
  postarProdutosAPI()

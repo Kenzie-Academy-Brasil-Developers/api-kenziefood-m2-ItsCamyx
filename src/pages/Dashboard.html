@@ -62,11 +62,11 @@
             <form id="modalCadastrarProdutos--infos">
 
                 <label class="labelAdmin"  for="nomeDoProduto">Nome do Produto</label>
-                <input type="text" name="nome" placeholder="Nome do produto" class="inputAdmin" />
+                <input type="text" name="nome" placeholder="Nome do produto" class="inputAdmin" class="inputCad" />
 
                 <label class="labelAdmin"  for="descricao">Descrição</label>
                 <input type="text" name="descricao" placeholder="Descrição" class="inputAdmin"
-                    class="inputFormAdminDescricao" />
+                    class="inputFormAdminDescricao" class="inputCad" />
 
                     <label class="labelAdmin"  name ="categoria" for="Categorias">Categorias</label>
 
@@ -78,13 +78,14 @@
                       </select>
 
             <label class="labelAdmin"  for="valorDoProduto">Valor do produto</label>
-                <input type="text" name="preco" placeholder="Valor do produto" class="inputAdmin" />
+                <input type="text" name="preco" placeholder="Valor do produto" class="inputAdmin" class="inputCad"/>
 
                 <label class="labelAdmin"  for="linkImg">Link da imagem</label>
-                <input type="text" name="imagem" placeholder="Link da imagem" class="inputAdmin" />
+                <input type="text" name="imagem" placeholder="Link da imagem" class="inputAdmin" class="inputCad"/>
 
                 <button class="modalCadastrarProdutos--botao">Cadastrar Produto</button>
             </form>
+        </div>
         </div>
 
 
@@ -92,7 +93,7 @@
         <div class="modalEditar">
           <div class="dashboard--modalEditarProdutos--cabecalho">
             <h2>Edição do produto</h2>
-            <button class="dashboard--modalEditarProdutos--fechar">X</button>
+            <button class="dashboard--modalEditarProdutos--fechar" name="botaoFecharModalEditar">X</button>
           </div>
     
           <form id="dashboard--modalEditarProdutos--infos">
@@ -132,7 +133,7 @@
         <div id="modalExcluir" class="modalForm">
           <div class="modalExcluir--cabecalho">
             <h2>Exclusão de produto</h2>
-            <button class="modalExcluir--fechar">X</button>
+            <button class="modalExcluir--fechar" name="botaoFecharModalExcluir">X</button>
           </div>
           <div class="modalExcluir--mensagem">
             <h2>Tem certeza que deseja excluir este produto?</h2>
@@ -174,5 +175,6 @@
         </div>
     
     <script type="module" src="../models/Usuario.js"></script>
+    <script type="module" src="../controllers/eventosController.js"></script>
 </body>
 </html>
