@@ -27,13 +27,13 @@ export { Usuario };
 import { VitrineController } from "../controllers/produtoController.js";
 
 const listaAdmin = document.querySelector("#dashboard-lista")
-console.log(listaAdmin)
+
   
   
   async function postarProdutosAPI(){
      const allPosts= await VitrineController.listarProdutos();
-     console.log(allPosts)
-    //  const resultado = percorrerArrayProd(allPosts)
+     
+    listaAdmin.innerHTML=''
      percorrerArrayProd(allPosts)
  }
 
@@ -81,4 +81,43 @@ console.log(listaAdmin)
  }
 
  postarProdutosAPI()
+//FILTRAR POR CATEGORIA//
+const catPanificadora= document.querySelector(".navbar-lista__categoria--panificadora");
+const catFrutas= document.querySelector(".navbar-lista__categoria--frutas");
+const catBebidas= document.querySelector(".navbar-lista__categoria--bebidas");
+const catTodos= document.querySelector(".navbar-lista__categoria--todos");
+catBebidas.addEventListener("click",filterContentClicked);
+catPanificadora.addEventListener("click",filterContentClicked);
+catFrutas.addEventListener("click",filterContentClicked);
+catTodos.addEventListener("click",postarProdutosAPI);
 
+async function filterContentClicked(e){
+  const  botaoClicado= e.target; 
+  const  produtosVindosDaAPI= await  VitrineController.listarProdutos();
+
+  
+  
+  const filtedCat= produtosVindosDaAPI.filter((produto)=>{
+  return produto.categoria == botaoClicado.innerHTML;
+  })
+
+  listaAdmin.innerHTML=''
+  percorrerArrayProd(filtedCat)
+}
+
+//BUSCAR CONTEÚDO PELO NOME
+const buscaPorNome= document.querySelector('.dashboard-formulario--input')
+buscaPorNome.addEventListener("keydown",buscarConteudo)
+
+async function buscarConteudo(){
+   
+  const produtosVindosDaAPI= await  VitrineController.listarProdutos();
+  
+  const textToSearch= buscaPorNome.value;
+  
+  const filtedName= produtosVindosDaAPI.filter((letra)=>{
+    return letra.nome.toLowerCase().includes(textToSearch.toLowerCase()) || letra.descricao.toLowerCase().includes(textToSearch.toLowerCase()) || letra.categoria.toLowerCase().includes(textToSearch.toLowerCase())
+  })
+  listaAdmin.innerHTML=''
+  percorrerArrayProd(filtedName)
+}

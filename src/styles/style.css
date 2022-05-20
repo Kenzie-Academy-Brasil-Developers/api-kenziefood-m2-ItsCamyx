@@ -615,6 +615,7 @@
     margin: 0 auto;
     background-color: #ffffff;
 }
+
 .dashboard-navbar{
     display: flex;
     margin-left: 1.7vw;
@@ -646,6 +647,14 @@
     margin-top: 15px;
     text-align: center;
     line-height: 1.2;
+}
+#dashboard-botao-adicionar-produto:hover{
+    box-shadow: 1px 2px 1px gray;
+
+}
+#dashboard-botao-adicionar-produto:active{
+    box-shadow: 1px 1px 0px gray;
+
 }
 #dashboard-main{
     display: flex;
